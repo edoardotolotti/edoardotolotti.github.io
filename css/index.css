@@ -1,0 +1,327 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+/* GLOBAL SETTING*/
+
+:root {
+	--chiaro: #F1F3EE;
+	--verde: #709F8C;
+	--verde90: #709F8CDC;
+	--verde70: #709F8CAF;
+	--giallo: #D99742;
+	--mattone: #9B5A48;
+	--verdescuro: #2F403C;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body, html {
+	margin: 0;
+	font-family: "Sofia Sans";
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* SEZIONE PRINCIPALE */
+
+#landing {
+	color: var(--chiaro);
+	display: flex;
+	flex-direction: column;
+	padding-top: 8vh;
+	padding-top: 70px;
+}
+
+.container a {
+	text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+	#landing-lower {
+		flex-direction: column;
+	}
+
+	#landing-lower > img {
+		width: 100%;
+	}
+
+	#div-name {
+		width: 100%;
+	}
+
+	#div-loghi {
+		flex-direction: row;
+		width: 100%;
+	}
+
+	#div-loghi > a {
+		margin: 40px 10px;
+	}
+
+	#div-loghi > a > img {
+		height: 50px;
+	}
+
+	#div-loghi > a > svg {
+		height: 50px;
+		overflow: visible;
+	}
+
+	#landing-lower > img {
+		width: 100%;
+		aspect-ratio: 16/10;
+		object-fit: cover;
+	}
+}
+
+@media (min-width: 1000px) {
+
+	#div-name {
+		width: 55%;
+	}
+
+	#div-loghi {
+		flex-direction: column;
+		width: 5%;
+	}
+
+	#div-loghi > a {
+		margin: 10px 0;
+	}
+
+	#div-loghi > a > img {
+		height: 50px;
+	}
+
+	#div-loghi > a > svg {
+		width: 50px;
+		overflow: visible;
+	}
+
+	#landing-lower > img {
+		width: 40%;
+		aspect-ratio: 16/10;
+		object-fit: cover;
+	}
+}
+
+#landing-lower {
+	display: flex;
+}
+
+#landing-upper {
+	padding-bottom: 30px;
+	text-align: center;
+	background-color: var(--verde);
+}
+
+#landing-upper > h1 {
+	font-size: 70px;
+	margin-bottom: 0;
+}
+
+#landing h3 {
+	font-size: 23px;
+	padding: 0 30px;
+}
+
+/* INFO E LOGHI */
+
+#div-name {
+	background-color: var(--verde90);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 40px;
+}
+
+#div-name > .container > h3 > .fa-solid {
+	color: var(--chiaro);
+	margin-right: 10px;
+}
+
+#div-name > .container > h4 {
+	margin-bottom: 40px;
+	text-align: justify;
+}
+
+#div-name > .container {
+	width: 85%;	
+}
+
+#div-loghi {
+	display: flex;
+	justify-content: center;
+	text-align: right;
+	background-color: var(--verde90);
+}
+
+
+#div-loghi > a > svg > path {
+	transform: scale(2.08);
+}
+
+/* FOTO */
+
+
+/* MENU */
+	
+#menu {
+	display: flex;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: var(--giallo);
+	height: 70px;
+	justify-content: center;
+	z-index: 2;
+}
+
+#menu > a {
+	color: var(--chiaro);	
+	margin: 0 auto;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	font-weight: bolder;
+	font-size:25px;
+}
+
+#menu-fullpage {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background-color: var(--giallo);
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	transition: margin .5s ease;
+}
+
+.menu-closed {
+	margin-top: -100vh;
+}
+
+.menu-open {
+	margin-top: 70px;
+}
+
+#menu-fullpage > a {
+	color: var(--chiaro);	
+	margin: 0 auto;
+	font-weight: bolder;
+	font-size:25px;
+	margin: 15px auto 0 30px;
+}
+
+@media (min-width: 800px) {
+	#menu > #mobile-a {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	#menu {
+		align-items: right;
+	}
+
+	#menu > a {
+		display: none;
+	}
+
+	#menu > #mobile-a {
+		display: flex;
+		margin: auto 30px auto auto;
+	}
+
+}
+
+/* SEZIONI ALTERNATE */
+
+.section a {
+	text-decoration: underline;
+}
+
+.section-chiara {
+	background-color: var(--chiaro);
+	color: var(--mattone);
+}
+
+.section-chiara > h1 {
+	color: var(--acqua);
+}
+
+.section-chiara > h3 {
+	color: var(--acqua);
+	text-align: center;
+	margin: 0 auto;
+}
+
+.section-chiara > h2 {
+	color: var(--acqua);
+	padding-left: 40px;
+	font-size: 45px;
+}
+
+.section-scura {
+	background-color: var(--mattone);
+	color: var(--chiaro);
+}
+
+.section-scura > h1 {
+	color: var(--chiaro);
+}
+
+.section-scura > h3 {
+	color: var(--chiaro);
+	margin-left: 30px
+}
+
+#publications > h3 {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.section-scura > h2 {
+	color: var(--chiaro);
+	padding-left: 40px;
+	font-size: 45px;
+}
+
+.section {
+	padding: 70px 0;
+}
+
+.section > h1 {
+	text-align: center;
+	margin: 0 auto;
+	font-size: 70px;
+}
+
+ul {
+	font-size: 20px;
+}
+
+.fa-ul {
+	margin-left: 80px !important;
+	margin-right: 50px;
+}
+
+.fa-ul > li {
+	margin: 4px 0;
+}
+
+.section > ul > li > .fa-li { 
+	color: var(--viola);
+}
+
+.section > ul {
+	color: var(--viola);
+}
